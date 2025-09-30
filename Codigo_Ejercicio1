@@ -1,0 +1,27 @@
+int suma = 0;
+int contador = 0;
+int nota;
+double promedio;
+
+Console.WriteLine("Ingrese las notas (Ingrese -1 para finalizar): ");
+
+Console.Write("Nota: ");
+nota = int.Parse(Console.ReadLine());
+
+while (nota != -1)
+{
+    suma += nota;
+    contador++;
+    Console.Write("Nota: ");
+    nota = int.Parse(Console.ReadLine());
+}
+Console.WriteLine("\n Resultados");
+
+Console.WriteLine($"Suma total de las notas: {suma}");
+Console.WriteLine($"Numero total de notas: {contador}");
+
+if (contador > 0)
+{
+    promedio = (double)suma / contador;
+    Console.WriteLine($"Promedio de las notas: {promedio}");
+}
