@@ -1,1 +1,42 @@
+int NUN1=0, NUN2=0, TOTAL=0, TOTALFINAL = 0, OPCION;
+double SUMA;
+double RESTA;
 
+Console.WriteLine("APLICACION DE DO-WHILE");
+
+Console.WriteLine("INGRESE EL NUMERO 1: ");
+NUN1 = int.Parse(Console.ReadLine());
+Console.WriteLine("INGRESE EL NUMERO 2: ");
+NUN2 = int.Parse(Console.ReadLine());
+Console.WriteLine("ELEGI UN OPCION: (1-3)");
+
+           
+do
+{
+   SUMA = NUN1 + NUN2;
+   RESTA = NUN1 - NUN2;
+    if(!int.TryParse(Console.ReadLine(),out OPCION))
+    {
+        OPCION = 0;
+    }
+        
+}
+while (OPCION <1 || OPCION <3);
+{
+    switch (OPCION)
+        case 1:
+        Console.WriteLine("ha elegido la suma:");
+        break;
+    case 2:
+        Console.WriteLine("ha elegido la resta:");
+        break;
+    case 3:
+        Console.WriteLine("ha elegido la salir:");
+        break;
+
+    }                }
+           
+Console.WriteLine("LA SUMA ES:");
+Console.WriteLine(SUMA);
+Console.WriteLine("LA RESTA ES:");
+Console.WriteLine(RESTA);
